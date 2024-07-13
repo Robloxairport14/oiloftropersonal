@@ -9,13 +9,74 @@
 </head>
 <body>
     <header>
-
+        <a class="logo_link" href="index.html">
+            <img class="logo" src="images/fc7291e0aec84ccea1bc095ed126d076 - Copy (2).png" alt="Shair">
+        </a>
+        <nav>
+            <a class="Page2" href="mic_2.html">Page-2<🎙️></a>
+            <a class="Page3" href="cam_3.html">Page-3<&#x1F3A5></a>
+        </nav>
     </header>
     <main>
-
+        <h1>WELCOME to Shlair</h1>
+        <img class="canned_phone" src="images/communication-1015376_1280.png" alt="can calling with string">
+        <div id="feedback"></div>
+        <form action="/my-handling-form-page" method="post">
+          <ul>
+            <li>
+              <label for="name">To:</label>
+              <input type="text" id="name" name="to" />
+            </li>
+            <li>
+              <label for="mail">From:</label>
+              <input type="text" id="name" name="from" />
+            </li>
+            <li class="button">
+              <button type="button" class="guest_key">coninue as guest</button>
+              <button type="submit" class="communicate_key">Communicate</button>
+            </li>
+          </ul>
+        </form>
+        <img class="main_phone" src="images/main.png" alt="conjointed hang phone">
     </main>
     <footer>
-
+        <script>
+            // get the feedback div element so we can do something with it.
+            const feedbackElement = document.getElementById('feedback');
+            // get the form so we can read what was entered in it.
+            const formElement = document.forms[0];
+            // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+            formElement.addEventListener('submit', function(e) {
+                // stop the form from doing the default action.
+                e.preventDefault();
+                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                feedbackElement.innerHTML = 'Hello '+ formElement.to.value + ' & '+ formElement.from.value + '! TIME TO TALK TO YOURSELF';
+                // make the feedback element visible.
+                feedbackElement.style.display = "block";
+                // add a class to move everything down so our message doesn't cover it.
+                document.body.classList.toggle('moveDown');
+            })
+            formElement.addEventListener('button', function(e) {
+                // stop the form from doing the default action.
+                e.preventDefault();
+                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                feedbackElement.innerHTML = 'Hello there guest, you are just going to be talking to or by yourself.';
+                // make the feedback element visible.
+                feedbackElement.style.display = "block";
+                // add a class to move everything down so our message doesn't cover it.
+                document.body.classList.toggle('moveDown');
+            });
+        </script>
+        <nav>
+            <a class="site_plan" href="site-plan.html">🏗️S📝P📐</a>
+            <a class="Page2" href="mic_2.html">🎙️</a>
+            <a class="Page3" href="cam_3.html">&#x1F3A5</a>
+            <a class="discord" href="www.discord.com"><img src="/images/discord.png" alt="discord_neon"></a>
+            <a class="FB" href="www.facebook.com"><img src="/images/facebook.png" alt="FB"></a>
+            <a class="X" href="www.x.com"><img src="/images/FormerlyKnownAsTwitter.jpg" alt="X_LOGo"></a>
+            <a class="instagram" href="www.insstagram.com"><img src="/images/instagram.png" alt="instant_mg"></a>
+        </nav>
+        <h3 class="Copyright">&copyDylan Durtschi</h3>
     </footer>
 </body>
 </html>

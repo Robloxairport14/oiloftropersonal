@@ -3,11 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/cam.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" href="/images/favicam_clear.ico" type="image/x-icon">
     <title>CAM</title>
+    <script>
+        function showConfirmation() {
+            const result = confirm("This website wants to access your Camera, are you sure?");
+            if (result) {
+                // User clicked "ALLOW"
+                // Perform the desired action here
+                alert("Action confirmed!");
+            } else {
+                // User clicked "DENIED"
+                // Handle cancellation or provide feedback
+                alert("Action canceled.");
+            }
+        }
+    </script>
 </head>
 <body>
-    
+    <header>
+        <a class="logo_link" href="index.html">
+            <img class="logo" src="images/fc7291e0aec84ccea1bc095ed126d076 - Copy (2).png" alt="Shair">
+        </a>
+        <nav>
+            <a class="Page2" href="mic_2.html">Page-2<🎙️></a>
+            <a class="Page3" href="cam_3.html">Page-3<&#x1F3A5></a>
+        </nav>
+    </header>
+    <main>
+        <nav>
+            <a onclick="showConfirmation('hello world')">🎥</a>
+        </nav>
+        <img src="/images/phone_guy.png" alt="Lightalking to yourself">
+        <img src="/images/Phone_guy2.png" alt="dark talking to self">
+        <h2 class="whappens"> < click hereto access your camera. </h2>
+
+    </main>
+    <footer>
+        <nav>
+            <a class="site_plan" href="site-plan.html">🏗️S📝P📐</a>
+            <a class="Page2" href="mic_2.html">🎙️</a>
+            <a class="Page3" href="cam_3.html">&#x1F3A5</a>
+            <a class="discord" href="www.discord.com"><img src="/images/discord.png" alt="discord_neon"></a>
+            <a class="FB" href="www.facebook.com"><img src="/images/facebook.png" alt="FB"></a>
+            <a class="X" href="www.x.com"><img src="/images/FormerlyKnownAsTwitter.jpg" alt="X_LOGo"></a>
+            <a class="instagram" href="www.insstagram.com"><img src="/images/instagram.png" alt="instant_mg"></a>
+        </nav>
+        <h3 class="Copyright">&copyDylan Durtschi</h3>
+    </footer>
 </body>
 </html>
