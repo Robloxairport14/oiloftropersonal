@@ -1,3 +1,20 @@
+@font-face {
+    font-family: Greatest Showman;
+    src: url(/font/The\ Greatest\ Font.otf);
+  }
+
+  @font-face {
+  font-family: Moana;
+  src: url(/font/Moanas.ttf);
+}
+
+:root {
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Moana";
+    --paragraph-font: "Greatest Showman";
+  }
+  
+
 /* every grid box should be as 10px as the site plan,
 I'm trying to shape all content as the siteplan like
 a puzzle for preschoolers where this class or id goes
@@ -14,11 +31,15 @@ body{
   }
   /* to_from */
   form {
+    font-family: var(--paragraph-font);
     display: inline-block;
     /* Form outline */
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 1em;
+  }
+  .guest_key, .communicate_key{
+    font-family: var(--paragraph-font);
   }
   header{
     grid-column-start: 1;
@@ -63,6 +84,7 @@ body{
     height: 100%;
   }
   .Page2h{
+    font-family: var(--heading-font);
     grid-column-start: 11;
     grid-column-end: 26;
     grid-row-start: 1;
@@ -72,6 +94,7 @@ body{
 
   }
   .Page3h{
+    font-family: var(--heading-font);
     grid-column-start: 41;
     grid-column-end: 46;
     grid-row-start: 1;
@@ -153,12 +176,16 @@ body{
     height: 50px;
   }
   .wcom{
+    font-family: var(--paragraph-font);
     grid-column-start: 20;
     grid-column-end: 32;
     grid-row-start: 7;
     grid-row-end: 14;
     width: 100%;
     height: 100%;
+  }
+  .site_plan_f{
+    font-family: var(--paragraph-font);
   }
   
   #feedback {
