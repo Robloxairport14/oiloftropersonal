@@ -6,6 +6,7 @@ https://www.amazon.com/Roberly-Montessori-Geometric-Preschool-Educational/dp/B0C
 
 body{
     /* 500px_by_550px  */
+    text-align: center;
     display: grid;
     grid-template-rows: repeat(55, 10px);
     grid-template-columns: repeat(50, 10px);
