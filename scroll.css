@@ -1,0 +1,190 @@
+body, html {
+  height: 100%;
+}
+body{
+    text-align: center;
+}
+
+.parallax0 {
+  /* The image used */
+  background-image: url(/images/WIN_20240713_22_16_36_0deg.jpg);
+
+
+
+
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax5 {
+    /* The image used */
+    background-image: url(/images/WIN_20240713_22_16_36_05deg.jpg);
+
+  
+  
+  
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax10 {
+    /* The image used */
+    background-image: url(/images/WIN_20240713_22_16_36_10deg.jpg);
+
+  
+  
+  
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax15 {
+    /* The image used */
+
+    background-image: url(/images/WIN_20240713_22_16_36_15deg.jpg);
+
+  
+  
+  
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax20 {
+    /* The image used */
+
+    background-image: url(/images/WIN_20240713_22_16_36_20deg.jpg);
+
+  
+  
+  
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax25 {
+    /* The image used */
+
+    background-image: url(/images/WIN_20240713_22_16_36_25deg.jpg);
+
+  
+  
+  
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax30 {
+    /* The image used */
+
+    background-image: url(/images/WIN_20240713_22_16_36_30deg.jpg);
+
+  
+  
+  
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax35 {
+    /* The image used */
+
+    background-image: url(/images/WIN_20240713_22_16_36_35deg.jpg);
+
+  
+  
+  
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax40 {
+    /* The image used */
+
+    background-image: url(/images/WIN_20240713_22_16_36_40deg.jpg);
+
+  
+  
+  
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .parallax45 {
+    /* The image used */
+
+    background-image: url(/images/WIN_20240713_22_16_36_45deg.jpg);
+  
+  
+  
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }

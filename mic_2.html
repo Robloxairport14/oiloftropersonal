@@ -1,3 +1,59 @@
+<!-- <!DOCTYPE html>
+<html>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #04AA6D;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+</style>
+<body>
+
+<h1>JavaScript Progress Bar</h1>
+
+<div id="myProgress">
+  <div id="myBar">10%</div>
+</div>
+
+<br>
+<button onclick="move()">Click Me</button> 
+
+<script>
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width  + "%";
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+ -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +77,18 @@
         }
     </script>
 </head>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #04AA6D;
+}
+</style>
 <body>
     <header>
         <a class="logo_link" href="index.html">
@@ -38,7 +106,37 @@
         <img class="female" src="/images/headset_landline.jpg" alt="female headset circle dial phone">
         <img class="gram" src="/images/7eb44bc8-1b90-4201-a38f-2442c7ce234e.png" alt="hallogram microphone">
         <h2 class="whappens"> < click here to access your microphone. </h2>
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
         <h2>⏪⏯️⏩</h2>
+        <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+          
+          <br>
+          <button onclick="move()">Click Me</button> 
+          
+          <script>
+          var i = 0;
+          function move() {
+            if (i == 0) {
+              i = 1;
+              var elem = document.getElementById("myBar");
+              var width = 1;
+              var id = setInterval(frame, 1000);
+              function frame() {
+                if (width >= 100) {
+                  clearInterval(id);
+                  i = 0;
+                } else {
+                  width++;
+                  elem.style.width = width + "%";
+                }
+              }
+            }
+          }
+          </script>
 
     </main>
     <footer>
