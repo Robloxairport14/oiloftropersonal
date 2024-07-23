@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" href="/images/favicon_mic_clear.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon_mic_clear.ico" type="image/x-icon"> 
+	  <meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
     <title>MIC</title>
     <script>
         function showConfirmation() {
@@ -21,18 +23,7 @@
         }
     </script>
 </head>
-<style>
-#myProgress {
-  width: 100%;
-  background-color: #ddd;
-}
 
-#myBar {
-  width: 1%;
-  height: 30px;
-  background-color: #04AA6D;
-}
-</style>
 <body>
     <header>
         <a class="logo_link" href="index.html">
@@ -43,82 +34,117 @@
             <a class="Page3h" href="cam_3.html">Page-3<&#x1F3A5></a>
         </nav>
     </header>
-    <main>
-        <nav>
+    <main class="mic_2">
+        <nav class="nav_2">
             <a class="request_mic" onclick="showConfirmation('hello world')">🎙️</a>
+            <h2 class="whappens"> < click here to access your microphone. </h2>
         </nav>
-        <h2 class="whappens"> /\ click here to access your microphone. </h2>
         <img class="female" src="/images/headset_landline.jpg" alt="female headset circle dial phone">
+        <div class="calor_2"></div>
+        <div class="colar_2"></div>
+        <div class="white2"></div>
+        <div class="white2"></div>
+        <div class="white2"></div>
         <img class="gram" src="/images/7eb44bc8-1b90-4201-a38f-2442c7ce234e.png" alt="hallogram microphone">
         <div id="myProgress">
-            <div id="myBar"></div>
-        </div>
-          
-          <br>
-          <button onclick="rewind()">⏪</button>
-          <button onclick="move()">⏯️</button>
-          <button onclick="fastForward()">⏩</button>
-          <button onclick="reset()">🔄</button>
-          
-          <script>
-            var i = 0;
-            var id = null; // Declare id outside the function
-            var speed = 1; // Speed of the progress bar
-            
-            function move() {
-              var elem = document.getElementById("myBar");
-              var width = parseInt(elem.style.width.slice(0, -1)); // Get the current width
-              if (id) {
-                clearInterval(id); // If id is set, clear the interval
-                id = null; // Set id to null
-              } else {
-                id = setInterval(frame, 1000); // If id is not set, start the interval
+          <div id="myBar"></div>
+          <button id="move">⏯️</button>
+          <button class="rewind" onclick="rewind()">⏪</button>
+          <button class="FastF" onclick="fastForward()">⏩</button>
+          <button id="reset">🛑</button>
+          <div id="time">
+              <span class="digit" id="hr">00</span>
+              <span class="txt">:</span>
+              <span class="digit" id="min">00</span>
+              <span class="txt">:</span>
+              <span class="digit" id="sec">00</span>
+              <span class="txt">:</span>
+              <span class="digit" id="count">00</span>
+          </div>
+      </div>
+  
+      <script>
+          let hour = 0;
+          let minute = 0;
+          let second = 0;
+          let count = 0;
+          let timer = false; // Initialize the timer flag
+  
+          function stopWatch() {
+              if (timer) {
+                  count++;
+  
+                  if (count === 100) {
+                      second++;
+                      count = 0;
+                  }
+  
+                  if (second === 60) {
+                      minute++;
+                      second = 0;
+                  }
+  
+                  if (minute === 60) {
+                      hour++;
+                      minute = 0;
+                      second = 0;
+                  }
+  
+                  let hrString = hour < 10 ? "0" + hour : hour;
+                  let minString = minute < 10 ? "0" + minute : minute;
+                  let secString = second < 10 ? "0" + second : second;
+                  let countString = count < 10 ? "0" + count : count;
+  
+                  // Update the time display
+                  document.getElementById('hr').innerHTML = hrString;
+                  document.getElementById('min').innerHTML = minString;
+                  document.getElementById('sec').innerHTML = secString;
+                  document.getElementById('count').innerHTML = countString;
+  
+                  // Update the progress bar
+                  let elem = document.getElementById("myBar");
+                  let width = (hour * 3600 + minute * 60 + second + count / 100) / 864; // Calculate percentage
+                  elem.style.width = width * 100 + "%";
               }
-              function frame() {
-                if (width >= 100) {
-                  clearInterval(id);
-                  id = null; // Set id to null when progress is complete
-                } else {
-                  width += speed;
-                  elem.style.width = width + "%";
-                }
+  
+              // Call this function periodically (e.g., using setInterval)
+              setTimeout(stopWatch, 10); // Continue the timer
+          }
+  
+          // Start or pause the timer when the button is clicked
+          document.getElementById('move').addEventListener('click', function () {
+              timer = !timer; // Toggle the timer flag
+              if (timer) {
+                  stopWatch(); // Start the timer
               }
-            }
-            
-            function rewind() {
-              speed = -1; // Set speed to negative for rewind
-              move(); // Start the progress bar
-            }
-            
-            function fastForward() {
-              speed = 2; // Set speed to 2 for fast forward
-              move(); // Start the progress bar
-            }
-            
-            function reset() {
-              var elem = document.getElementById("myBar");
-              elem.style.width = "0%"; // Reset the progress bar to 0
-              speed = 1; // Reset the speed to 1
-              if (id) {
-                clearInterval(id); // If id is set, clear the interval
-                id = null; // Set id to null
-              }
-            }
-            </script>
+          });
+  
+          // Reset the timer
+          document.getElementById('reset').addEventListener('click', function () {
+              timer = false;
+              hour = 0;
+              minute = 0;
+              second = 0;
+              count = 0;
+              document.getElementById('hr').innerHTML = "00";
+              document.getElementById('min').innerHTML = "00";
+              document.getElementById('sec').innerHTML = "00";
+              document.getElementById('count').innerHTML = "00";
+              document.getElementById("myBar").style.width = "0%"; // Reset the progress bar
+          });
+      </script>
           
 
     </main>
     <footer>
-        <nav>
-            <a class="site_plan" href="site-plan.html">🏗️S📝P📐</a>
-            <a class="Page2f" href="mic_2.html">🎙️</a>
-            <a class="Page3f" href="cam_3.html">&#x1F3A5</a>
-            <a class="discord" href="www.discord.com"><img src="/images/discord.png" alt="discord_neon"></a>
-            <a class="FB" href="www.facebook.com"><img src="/images/facebook.png" alt="FB"></a>
-            <a class="X" href="www.x.com"><img src="/images/FormerlyKnownAsTwitter.jpg" alt="X_LOGo"></a>
-            <a class="instagram" href="www.insstagram.com"><img src="/images/instagram.png" alt="instant_mg"></a>
-        </nav>
-        <h3 class="Copyright">&copyDylan Durtschi</h3>
+      <a class="site_plan_f" href="site-plan.html">🏗️S📝P📐</a>
+      <a class="Page2f" href="mic_2.html">🎙️</a>
+      <a class="Page3f" href="cam_3.html">&#x1F3A5</a>
+      <a class="discord" href="https://www.discord.com"><img class="discord" src="images/discord.png" alt="discord_neon"></a>
+      <a class="FB" href="www.facebook.com"><img class="FB" src="images/facebook.png" alt="FB"></a>
+      <a class="X" href="www.x.com"><img class="X" src="images/FormerlyKnownAsTwitter.jpg" alt="X_LOGo"></a>
+      <a  class="instagram" href="www.insstagram.com"><img class="instagram" src="images/instagram.png" alt="instant_mg"></a>
+      <h3 class="Copyright">&copyDylan Durtschi</h3>
     </footer>
 </body>
 </html>

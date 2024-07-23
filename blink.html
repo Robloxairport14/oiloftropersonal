@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinking Circle</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <button id="blinkButton">⏯️</button>
+    <div class="circle" id="circle"></div>
+
+    <script>
+        const circle = document.getElementById("circle");
+        const blinkButton = document.getElementById("blinkButton");
+        let blinking = false;
+        let blinkInterval;
+
+        function toggleBlink() {
+            if (blinking) {
+                clearInterval(blinkInterval);
+                blinking = false;
+                circle.style.opacity = "0";
+            } else {
+                blinkInterval = setInterval(() => {
+                    circle.style.opacity = circle.style.opacity === "0" ? "1" : "0";
+                }, 500);
+                blinking = true;
+            }
+        }
+
+        blinkButton.addEventListener("click", toggleBlink);
+    </script>
+</body>
+</html>
