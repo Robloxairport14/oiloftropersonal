@@ -37,10 +37,7 @@ body{
     font-family: var(--paragraph-font);
   }
   footer{
-    grid-row-start: 750;
-    grid-row-end: 800;
-    grid-column-start: 1;
-    grid-column-end: 150;
+    grid-template-columns: 150px 1fr;
     
   }
   header{
@@ -151,9 +148,8 @@ body{
     /* Match form field borders */
     border: 1px solid #999;
   }
-  main{
-    display: grid;
-  }
+  /* main{
+  } */
   .site_plan_f{
     font-family: var(--paragraph-font);
   }
