@@ -1,6 +1,6 @@
 @font-face {
     font-family: Greatest Showman;
-    src: url(/font/The\ Greatest\ Font.otf);
+    src: url(/font/TheGreatestFont.otf);
   }
 
   @font-face {
@@ -22,11 +22,10 @@ to wheere I think it fits in, just like this amazon link.
 https://www.amazon.com/Roberly-Montessori-Geometric-Preschool-Educational/dp/B0CGLPRHR9/ref=asc_df_B0CGLPRHR9?tag=bingshoppinga-20&linkCode=df0&hvadid=80401884651452&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=&hvtargid=pla-4584001441429762&psc=1 */
 
 body{
-    /* 500px_by_550px  */
     text-align: center;
     display: grid;
-    grid-template-rows: repeat(55, 10px);
-    grid-template-columns: repeat(50, 10px);
+    grid-template-rows: repeat(200, 10px);
+    grid-template-columns: repeat(150, 10px);
     background-color: #D4AC0D;
   }
   /* to_from */
@@ -41,23 +40,10 @@ body{
   .guest_key, .communicate_key{
     font-family: var(--paragraph-font);
   }
-  header{
-    grid-column-start: 1;
-    grid-column-end: 51;
-    grid-row-start: 1;
-    grid-row-end: 6;
-  }
   footer{
     grid-row-start: 46;
     grid-row-end: 56;
-    grid-column-start: 1;
-    grid-column-end: 51;
-  }
-  main{
-    grid-column-start: 1;
-    grid-column-end: 51;
-    grid-row-start: 6;
-    grid-row-end: 46;
+    grid-template-columns: 1/150;
   }
   .Copyright{
     grid-column-start: 1;
@@ -99,25 +85,26 @@ body{
     width: 100px;
     height: 100px;
   }
-  .Page2h{
+  .Page2h, .Page3h{
     font-family: var(--heading-font);
-    grid-column-start: 11;
-    grid-column-end: 26;
-    grid-row-start: 1;
-    grid-row-end: 6;
+    margin-left: 300px;
+    margin-top: 20px;
+    font-size:large;
     width: 100%;
     height: 100%;
-
   }
   .Page3h{
-    font-family: var(--heading-font);
-    grid-column-start: 41;
-    grid-column-end: 46;
-    grid-row-start: 1;
-    grid-row-end: 6;
+    margin-left: 310px;
+  }
+  header, .logo_link{
     width: 100%;
     height: 100%;
-
+    grid-row-start: 1;
+    grid-row-end: 25;
+    grid-column-start: 1;
+    grid-column-end: 250;
+    margin-left: 100px;
+    margin-top: 200px;
   }
   .discord{
     grid-column-start: 41;
@@ -175,28 +162,17 @@ body{
     width: 100%;
     height: 100%;
   }
+  main{
+    grid-column-start: 1;
+    grid-column-end: 51;
+    grid-row-start: 6;
+    grid-row-end: 46;
+  }
   .main_phone{
     grid-column-start: 41;
     grid-column-end: 51;
     grid-row-start: 21;
     grid-row-end: 31;
-    width: 100%;
-    height: 100%;
-  }
-  .logo_link{
-    grid-column-start: 1;
-    grid-column-end: 11;
-    grid-row-start: 1;
-    grid-row-end: 6;
-    width: 100px;
-    height: 50px;
-  }
-  .wcom{
-    font-family: var(--paragraph-font);
-    grid-column-start: 20;
-    grid-column-end: 32;
-    grid-row-start: 7;
-    grid-row-end: 14;
     width: 100%;
     height: 100%;
   }
@@ -224,9 +200,16 @@ body{
     background-color: rgb(0, 61, 0); 
 } 
   
-h1 { 
+h1, .wcom{ 
     color: rgb(10, 238, 10); 
-    text-align: center; 
+    font-family: var(--paragraph-font);
+    grid-column-start: 100;
+    grid-column-end: 150;
+    grid-row-start: 1;
+    grid-row-end: 50;
+    width: 100%;
+    height: 100%;
+    
 } 
   
 .digit { 
@@ -240,37 +223,8 @@ h1 {
 } 
   
 #buttons { 
-    margin-top: 50px; 
-} 
-  
-.btn { 
-    width: 100px; 
-    padding: 10px 15px; 
-    margin: 0px 20px; 
-    border-top-right-radius: 10px; 
-    border-bottom-left-radius: 10px; 
-    border-bottom-right-radius: 4px; 
-    border-top-left-radius: 4px; 
-    cursor: pointer; 
-    font-size: 20px; 
-    transition: 0.5s; 
-    color: white; 
-    font-weight: 500; 
+    margin-top: 200px; 
 }
-.btn_stop{
-    width: 100px; 
-    padding: 10px 15px; 
-    margin: 0px 20px; 
-    border-top-right-radius: 10px; 
-    border-bottom-left-radius: 10px; 
-    border-bottom-right-radius: 4px; 
-    border-top-left-radius: 4px; 
-    cursor: pointer; 
-    font-size: 20px; 
-    transition: 0.5s; 
-    color: red; 
-    font-weight: 500; 
-} 
   
 #start { 
     background-color: #009779; 
